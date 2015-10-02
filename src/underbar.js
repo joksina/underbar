@@ -521,7 +521,7 @@ _.contains = function(list, target){
         //set waits to true
         waits = true;
         if(timeOut < 0)
-          prevWait = 0;
+          var preWait = 0;
           timeOut = timeOut + wait;
 
           var rem = wait - (eDate - start) + timeOut;
