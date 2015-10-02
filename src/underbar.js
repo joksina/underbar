@@ -418,6 +418,9 @@ _.contains = function(list, target){
   // of that string. For example, _.sortBy(people, 'name') should sort
   // an array of people by their name.
   _.sortBy = function(collection, iterator) {
+    //check if the iterator is a function
+    //sort the collection by invoking each element
+    //else use the bracket notation to sort each element
     if(typeof iterator === "function"){
       return collection.sort(function(a, b){
         return iterator(a) - iterator(b);
@@ -439,7 +442,7 @@ _.contains = function(list, target){
     var result = [];
     var longs = _.reduce(arg, function(acc, curr){
       //This is tenary expression if length of acc
-    //greater than lenght of curr, retaur acc else return curr
+    //greater than lenght of curr, return acc else return curr
       return acc.length > curr.length ? acc : curr;
     }, 0);
     _.each(longs, function(value, i){
