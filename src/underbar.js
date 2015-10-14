@@ -133,7 +133,7 @@ _.indexOf = function(array, target){
       if(_.indexOf(result, value) < 0){
         result.push(value);
       }
-    }, []);
+    });
 
     return result;
   };
