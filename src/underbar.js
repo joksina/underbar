@@ -350,8 +350,9 @@ _.contains = function(list, target){
       if(arg in memo){
         return memo[arg];
       }else{
-        return memo[arg] = func.apply(this, arg);
+         memo[arg] = func.apply(this, arg);
       }
+      return memo[arg];
     };
   };
 
